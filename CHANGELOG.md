@@ -1,3 +1,11 @@
+# Version 3.12.0
+
+**Features**
+
+- Added a `disableDeselectOnClick` prop. By default, clicking the empty area
+below the rows clears the selection; setting this prop keeps the current
+selection intact instead (#245, #308). (#369)
+
 # Version 3.11.0
 
 **Features**
