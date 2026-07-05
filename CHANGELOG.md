@@ -1,3 +1,11 @@
+# Version 3.13.2
+
+**Fixes**
+
+- Inputs rendered inside the tree (e.g. an `<input>` in a modal) can now receive
+Space characters again. The tree's keyboard handler no longer intercepts
+keystrokes that originate from a nested form field or contenteditable element. (#377)
+
 # Version 3.13.1
 
 **Fixes**
