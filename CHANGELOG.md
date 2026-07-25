@@ -1,3 +1,22 @@
+# Version 3.16.0
+
+**Features**
+
+- Added a `filteredCount` getter to the tree API, reporting how many nodes match
+the current `searchTerm` across the whole tree (regardless of which folders are
+open), or 0 when there is no active search. Consumers can now render a match
+count or a "no results" message via `isFiltered && filteredCount === 0` instead
+of inspecting `visibleNodes` (issues #112 and #256). (#383)
+
+**Fixes**
+
+- The default `searchMatch` no longer searches a node's children. It previously
+stringified every value of the node's data, the `children` array included, so
+each ancestor of a match counted as a match itself, and terms like `id` or
+`name` matched every folder by hitting keys nested in the children data. The filtered list is unchanged — parents of a match
+are still shown to keep the tree's structure — but `tree.filteredCount` now
+reports real matches. (#383)
+
 # Version 3.15.1
 
 **Fixes**
